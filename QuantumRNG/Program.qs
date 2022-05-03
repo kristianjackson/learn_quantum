@@ -29,4 +29,11 @@ namespace QuantumRNG {
         } until (output <= max);
         return output;
     }
+
+    @EntryPoint()
+    operation SampleRandomNumber() : Int {
+        let max = 50;
+        Message($"Sampling a random number between 0 and {max}: ");
+        return SampleRandomNumberInRange(max);
+    }
 }
